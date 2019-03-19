@@ -13,7 +13,7 @@ do
 	case $OPT in
 		t)
  		temp="$OPTARG"
- 		if [ $temp -ne 1 -a $temp -ne 2 ]; then
+ 		if [ $temp -ne 0 -a $temp -ne 1 ]; then
  			echo 't: 参数输入不合格'
  			exit 1;
  		fi
@@ -21,7 +21,7 @@ do
 		;;
 	 	e)
  		temp="$OPTARG"
- 		if [ $temp -ne 1 -a $temp -ne 2 -a $temp -ne 3 ]; then
+ 		if [ $temp -ne 0 -a $temp -ne 1 -a $temp -ne 2 ]; then
  			echo 'e: 参数输入不合格'
  			exit 1;
  		fi
@@ -29,14 +29,14 @@ do
  		;;
  		c)
  		temp="$OPTARG"
- 		if [ $temp -ne 1 -a $temp -ne 2 ]; then
+ 		if [ $temp -ne 0 -a $temp -ne 1 ]; then
  			echo 'c : 参数输入不合格'
  			exit 1
  		fi
  		configuration=$temp
  		;;
  		r)
- 		if [ $temp -ne 1 -a $temp -ne 2 ]; then
+ 		if [ $temp -ne 0 -a $temp -ne 1 ]; then
  			echo 'r: 参数输入不合格'
  			exit 1
  		fi
